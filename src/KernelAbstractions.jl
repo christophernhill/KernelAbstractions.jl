@@ -528,4 +528,8 @@ include("reflection.jl")
 
 include("cpu.jl")
 
+if !isdefined(Base, :get_extension)
+    include("../ext/EnzymeExt.jl")
+end
+
 end #module
